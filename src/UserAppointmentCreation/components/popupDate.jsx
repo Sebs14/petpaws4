@@ -16,7 +16,7 @@ export default function MyModal() {
     <>
       <div className=" inset-0 flex items-center justify-center">
         <button
-          type="button"
+          type="submit"
           onClick={openModal}
           className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-emerald-900 border-2 border-emerald-900 rounded-full hover:text-white group hover:bg-gray-50"
         >
