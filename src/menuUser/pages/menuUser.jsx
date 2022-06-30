@@ -16,6 +16,7 @@ export default function MenuUser() {
         ]}
         logged={{ function: true }}
       />
+      <div className="h-full">
       <CardContainer>
         <MenuButton
           title="Dates"
@@ -36,6 +37,7 @@ export default function MenuUser() {
           url="/vaccineRegister"
         />
       </CardContainer>
+      </div>
     </main>
   );
 }

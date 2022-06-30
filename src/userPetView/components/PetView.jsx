@@ -1,6 +1,6 @@
 export default function PetView({id, petName, petAge, petRaze, petSpecies, src }){
     return(
-        <article className="bg-white shadow-md border border-gray-200 rounded-t-2xl rounded-b-xl max-w-2xl  dark:bg-gray-800 dark:border-gray-700 sm:w-full md:w-full ">
+        <article className="m-4 bg-white shadow-md border border-gray-200 rounded-t-2xl rounded-b-xl max-w-2xl  dark:bg-gray-800 dark:border-gray-700 sm:w-full md:w-full ">
             <div className=" flex flex-content justify-center">
                 <img className="aspect-video rounded-t-3xl object-cover object-center sm:w-3/4 md:w-full p-4" src={src} />
             </div>

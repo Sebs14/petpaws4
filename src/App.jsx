@@ -27,8 +27,7 @@ import "./index.css";
 function App() {
   return (
     <div
-      style={{ backgroundImage: `url(${Waves})`, backgroundColor: "#A7D8F3" }}
-      className="bg-no-repeat bg-contain bg-bottom h-full"
+      className="bg-no-repeat bg-contain bg-fixed bg-bottom"
     >
       <BrowserRouter>
         <Routes>

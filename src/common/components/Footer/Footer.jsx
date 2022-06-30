@@ -3,7 +3,7 @@ import Logo from "../../assets/images/puglogo.png";
 export default function Card() {
   return (
     <div className="w-full mx-auto flex justify-end">
-      <footer className="p-4 bg-white bg-opacity-70 sm:p-6 dark:bg-gray-800 dark:bg-opacity-80">
+      <footer className="w-full p-4 bg-white bg-opacity-70 sm:p-6 dark:bg-gray-800 dark:bg-opacity-80">
         <div className="mb-6 md:mb-0 w-10">
           <a
             href="https://github.com/Programacion-NCapas-01-2022/proyecto-grupo-de-trabajo-16-messiesuii"

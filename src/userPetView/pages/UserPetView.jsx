@@ -1,8 +1,25 @@
 import Petview from "../components/PetView";
 import Navbar from "../../common/components/Navbar/Navbar";
-import Image from "../../common/assets/images/capybara.jpg";
+import Image from "../../common/assets/images/bh.jpeg";
+import MyPets from "../../Services/myPets"
+import { useEffect, useState } from "react";
 
 export default function UserPetView() {
+
+  const [pets, setPets] = useState([]);
+
+  useEffect(() =>{
+    MyPets().then(
+      (response) => {
+        setPets(response.data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }, []);
+ 
+
   return (
     <main>
       <Navbar
@@ -12,15 +29,18 @@ export default function UserPetView() {
         ]}
         logged={{ function: true }}
       />
-      <div className='w-full h-screen flex flex-col justify-center items-center p-8'>
+      <div className='w-full h-screen flex flex-row flex-wrap justify-around items-center p-8'>
+        
+        {pets.map((item) => 
         <Petview
           src={Image}
-          id='009978'
-          petName='Manuel de yisus'
-          petAge='21'
-          petRaze='brown capybara'
-          petSpecies='capybara'
+          id= {item.id}
+          petName={item.name}
+          petAge={item.age}
+          petRaze={item.breed}
+          petSpecies={item.specie}
         />
+        )}
       </div>
     </main>
   );

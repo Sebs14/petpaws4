@@ -1,4 +1,5 @@
 import RegisterForm from "./RegisterForm";
+import { NavLink } from "react-router-dom";
 
 export default function Card({ title, method, buttonGoogle, src }) {
   return (
@@ -7,7 +8,7 @@ export default function Card({ title, method, buttonGoogle, src }) {
         {title}
       </h1>
       <div className="mb-6 text-center">
-        <a href="/Login">
+        <a>
           <button
             type="button"
             className="flex justify-center items-center w-full text-white bg-emerald-500 hover:bg-emerald-600 focus:ring-4 focus:ring-emerald-600 font-semibold rounded-full text-lg px-5 py-2.5 text-center dark:bg-emerald-800 dark:hover:bg-emerald-900 dark:focus:ring-emerald-600"
@@ -25,11 +26,11 @@ export default function Card({ title, method, buttonGoogle, src }) {
       </div>
       <RegisterForm />
 
-      <a href="/Login">
+      <NavLink to='/Login'>
         <p className="text-center text-white hover:text-emerald-600">
           Already have an account? Login!
         </p>
-      </a>
+      </NavLink>
     </article>
   );
 }

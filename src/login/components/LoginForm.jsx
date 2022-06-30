@@ -14,7 +14,6 @@ const Login = () => {
       await AuthService.login(email, password).then(
         () => {
           navigate("/menuUser");
-          window.location.reload();
         },
         (error) => {
           console.log(error);

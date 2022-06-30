@@ -21,9 +21,6 @@ export default function Main() {
         logged={{ function: false }}
 
       />
-      {/* <div className="w-full">
-        <Carousel />
-      </div> */}
 
       <div>
         <CardContainer>
@@ -47,7 +44,7 @@ export default function Main() {
           />
         </CardContainer>
       </div>
-      <div className="bottom-0">
+      <div className="bottom-0 w-full">
         <Footer />
       </div>
     </main>
