@@ -2,6 +2,7 @@ import Navbar from "../../common/components/Navbar/Navbar";
 import CardAppointmentView from "../components/CardAppointmentView";
 
 export default function VetAppointment() {
+
   return (
     <main>
       <Navbar

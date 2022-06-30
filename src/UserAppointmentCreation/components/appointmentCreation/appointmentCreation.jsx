@@ -19,7 +19,9 @@ export default function appointmentCreation({ pet }) {
     try {
       await addAppointment(fechaSeleccionada, symptoms, idPet).then(
         (response) => {
+          console.log(fechaSeleccionada);
           navigate("/menuUser");
+          window.location.reload();
         },
         (error) => {
           console.log(error);
@@ -43,6 +45,7 @@ export default function appointmentCreation({ pet }) {
             <label>Fecha y Hora</label>
             <DateTimePicker
               value={fechaSeleccionada}
+              inputFormat="E MMM dd yyyy HH:MM:SS O"
               onChange={cambiarFechaSelecionada}
             />
           </div>
