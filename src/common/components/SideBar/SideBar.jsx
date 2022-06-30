@@ -50,7 +50,7 @@ export default function Sidebar() {
                 </g>
               </svg>
               <span className='flex-1 ml-3 whitespace-nowrap'>
-                Agendar Cita
+                Schedule an Appointment
               </span>
             </NavLink>
           </li>
@@ -73,7 +73,7 @@ export default function Sidebar() {
                 />
               </svg>
               <span className='flex-1 ml-3 whitespace-nowrap'>
-                Agregar Mascota
+                Add Pet
               </span>
             </NavLink>
           </li>

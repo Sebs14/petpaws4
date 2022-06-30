@@ -1,4 +1,7 @@
 import axios from "axios";
+
+axios.defaults.baseURL= "https://vet4paws.herokuapp.com/";
+
 const params = new URLSearchParams();
 const config = {
     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }

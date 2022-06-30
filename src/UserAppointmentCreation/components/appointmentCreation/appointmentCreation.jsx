@@ -5,6 +5,7 @@ import PopupDate from "../popupDate";
 import addAppointment from "../../../Services/appointmentCreation";
 import { useNavigate } from "react-router";
 import src2 from "../../../common/assets/images/checked.png"
+import { ca } from "date-fns/locale";
 
 export default function appointmentCreation({ pet }) {
   
@@ -36,21 +37,21 @@ export default function appointmentCreation({ pet }) {
     <div className="bg-white shadow overflow-hidden sm:rounded-lg">
       <div className="bg-emerald-600 px-4 py-5 flex justify-center items-center">
         <h3 className="text-lg leading-6 font-medium text-white">
-          Agendar cita
+          Schedule an Appointment
         </h3>
       </div>
       <div className="border-t border-gray-200 flex flex-col font-bold">
         <form onSubmit={handleappointmentCreation}>
           <div className="p-5 justify-center text-black">
-            <label>Fecha y Hora</label>
+            <label>Date and Hour</label>
             <DateTimePicker
               value={fechaSeleccionada}
               inputFormat="E MMM dd yyyy HH:MM:SS O"
-              onChange={cambiarFechaSelecionada}
+              onChange={(e) => cambiarFechaSelecionada(e.target.value)}
             />
           </div>
           <div className="p-5 justify-center text-black">
-            <p>Describa los síntomas del paciente</p>
+            <p>Pet symptoms</p>
             <div>
               <div className="mt-1">
                 <textarea
@@ -67,7 +68,7 @@ export default function appointmentCreation({ pet }) {
             </div>
           </div>
           <div className="p-5 justify-center text-black">
-            <p>Seleccionar mascota</p>
+            <p>Select Pet</p>
             <div className="col-span-6 sm:col-span-3">
               <input
                 type='text'
