@@ -1,6 +1,7 @@
 import Container from "../../userPetRegisterView/components/MenuCardComponent";
 import Card from '../components/card';
 import Navbar from "../../common/components/Navbar/Navbar";
+import Check from "../../common/assets/images/checked.png";
 
 export default function VaccineRegister(){
     return(
@@ -15,8 +16,9 @@ export default function VaccineRegister(){
             <div className="w-full h-screen flex flex-col justify-center items-center p-8">
                 <Container>
                 <Card
-                    title='id: 021349'
+                    title='Register vaccine'
                     color='bg-gray-300'
+                    src2={Check}
                     />
                 </Container>
             </div>  
