@@ -51,7 +51,7 @@ export default function Card({ title, color, src2 }) {
                 type='text'
                 placeholder='Vaccine name'
                 value={type}
-                onChange={(e) => setType(e.target.value)}
+                onChange={setType}
                 name='idPet'
                 required
               />
@@ -65,7 +65,7 @@ export default function Card({ title, color, src2 }) {
                 name="firstDose"
                 value={date}
                 inputFormat='E MMM dd yyyy HH:MM:SS O'
-                onChange={(e) => setDate(e.target.value)}
+                onChange={setDate}
               />
             </div>
             <div className='mb-4 md:mr-2 md:mb-0 md:pb-4'>
@@ -76,13 +76,13 @@ export default function Card({ title, color, src2 }) {
                 name="secondDose"
                 value={reinforcement}
                 inputFormat='E MMM dd yyyy HH:MM:SS O'
-                onChange={(e) => setReinforcement(e.target.value)}
+                onChange={setReinforcement}
               />
             </div>
             </MuiPickersUtilsProvider>
             <div className='mb-4 md:mr-2 md:mb-0 md:pb-4'>
               <h1 className='font-bold text-center dark:text-black'>
-                Second Dose:
+                Select Pet:
               </h1>
               <input
                 className='w-full px-3 py-2 text-sm bg-white leading-tight text-gray-700 border rounded-3xl shadow appearance-none focus:outline-none focus:shadow-outline'

@@ -1,11 +1,9 @@
 /* This requires Tailwind CSS v2.0+ */
 import React, { useState } from "react";
 import { DateTimePicker } from "@material-ui/pickers";
-import PopupDate from "../popupDate";
 import addAppointment from "../../../Services/appointmentCreation";
 import { useNavigate } from "react-router";
 import src2 from "../../../common/assets/images/checked.png"
-import { ca } from "date-fns/locale";
 
 export default function appointmentCreation({ pet }) {
   
@@ -46,8 +44,9 @@ export default function appointmentCreation({ pet }) {
             <label>Date and Hour</label>
             <DateTimePicker
               value={fechaSeleccionada}
+              label="Date Time Picker"
               inputFormat="E MMM dd yyyy HH:MM:SS O"
-              onChange={(e) => cambiarFechaSelecionada(e.target.value)}
+              onChange={cambiarFechaSelecionada}
             />
           </div>
           <div className="p-5 justify-center text-black">
