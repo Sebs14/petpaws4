@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
-    "jsx": "preserve",
+    "jsx": "preserve", 
     "module": "commonjs",
     "target": "es6",
     "checkJs": false,

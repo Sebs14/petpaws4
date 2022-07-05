@@ -11,8 +11,6 @@ export default function AboutUs() {
         navigation={[
           { name: "Home", href: "/", current: false },
           { name: "About Us", href: "/AboutUs", current: true },
-          { name: "Login", href: "/Login", current: false },
-          { name: "Register", href: "/Register", current: false },
         ]}
         logged={{ function: false }}
       />

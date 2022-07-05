@@ -12,7 +12,7 @@ export default function Card() {
           >
             <img src={Logo} className="mr-4 h-10" alt="FlowBite Logo" />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Veterinaria 4 Patas
+              Veterinary 4 Paws
             </span>
           </a>
         </div>
