@@ -3,6 +3,7 @@ import Carousel from "../components/carousel";
 import Footer from "../../common/components/Footer/Footer";
 import CardContainer from "../components/CardContainer/CardContainer";
 import Card from "../components/Card/Card";
+import Downloadss from "../components/download";
 
 import Mission from "../../common/assets/images/mission.jpg";
 import Vision from "../../common/assets/images/vision.jpg";
@@ -41,6 +42,9 @@ export default function Main() {
             color="bg-blue-400"
           />
         </CardContainer>
+      </div>
+      <div className="flex justify-center p-10">
+        <Downloadss/>
       </div>
       <div className="bottom-0 w-full">
         <Footer />
