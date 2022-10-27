@@ -16,6 +16,8 @@ export default function Main() {
         navigation={[
           { name: "Home", href: "/", current: true },
           { name: "About Us", href: "/AboutUs", current: false },
+          { name: "LogIn", href: "/login", current: false },
+          { name: "Register", href: "/register", current: false },
         ]}
         logged={{ function: false }}
 
