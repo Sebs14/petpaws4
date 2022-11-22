@@ -51,7 +51,7 @@ export default function Card({ title, color, src2 }) {
                 type='text'
                 placeholder='Vaccine name'
                 value={type}
-                onChange={setType}
+                onChange={(e) => setType(e.target.value)}
                 name='idPet'
                 required
               />
