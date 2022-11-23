@@ -26,7 +26,6 @@ import "./index.css";
 const clientId =
   "934779679694-g266vfjuv77f2a1n10j7rn9ft5kc4feu.apps.googleusercontent.com";
 function App() {
-  const accessToken = gapi.auth.getToken().access_token;
   useEffect(() => {
     function start() {
       gapi.client.init({
