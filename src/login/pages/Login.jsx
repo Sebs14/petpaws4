@@ -16,7 +16,7 @@ export default function Login() {
         logged={{ function: false }}
       />
       <div className="w-full h-screen flex flex-col justify-center items-center p-8">
-        <LoginCard title="Continue with" src={Google} buttonLogin="Google" />
+        <LoginCard title="Continue with" />
       </div>
     </main>
   );
