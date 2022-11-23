@@ -23,6 +23,24 @@ const signup = (email, password, name) => {
     });
 };
 
+const signupgoogle = (email, name) => {
+
+  params.append('email', email);
+  params.append('name', name);
+
+  return axios
+    .post("auth/signupgoogle",
+      params
+    )
+    .then((response) => {
+      
+      var cadena = JSON.stringify(response.data.token).replace(/['"]+/g, '');
+
+      localStorage.setItem("token", cadena);
+      return response.data;
+    });
+};
+
 const login = (email, password) => {
 
   params.append('identifier', email);
@@ -30,6 +48,24 @@ const login = (email, password) => {
 
   return axios
     .post("auth/signin", params)
+    .then((response) => {
+      
+      var cadena = JSON.stringify(response.data.token).replace(/['"]+/g, '');
+
+      localStorage.setItem("token", cadena);
+      return response.data;
+    });
+};
+
+const logingoogle = (email, name) => {
+
+  params.append('email', email);
+  params.append('name', name);
+
+  return axios
+    .post("auth/signingoogle", 
+      params
+    )
     .then((response) => {
       
       var cadena = JSON.stringify(response.data.token).replace(/['"]+/g, '');
@@ -49,7 +85,9 @@ const getCurrentUser = () => {
 
 const authService = {
   signup,
+  signupgoogle,
   login,
+  logingoogle,
   logout,
   getCurrentUser,
 };
