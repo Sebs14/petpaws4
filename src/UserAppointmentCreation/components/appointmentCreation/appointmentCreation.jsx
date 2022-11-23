@@ -32,9 +32,10 @@ export default function appointmentCreation({ pet }) {
   };
 
   return (
-    <div className="bg-white shadow overflow-hidden sm:rounded-lg">
+    
+    <div className="bg-white shadow overflow-hidden sm:rounded-lg w-1/2 opacity-90">
       <div className="bg-emerald-600 px-4 py-5 flex justify-center items-center">
-        <h3 className="text-lg leading-6 font-medium text-white">
+        <h3 className="text-lg leading-6 font-bold text-white">
           Schedule an Appointment
         </h3>
       </div>
@@ -42,9 +43,10 @@ export default function appointmentCreation({ pet }) {
         <form onSubmit={handleappointmentCreation}>
           <div className="p-5 justify-center text-black">
             <label>Date and Hour</label>
-            <DateTimePicker
+      
+            <DateTimePicker className="bg-gray-50 border border-gray-300  text-sm rounded-lg block w-full pl-10 p-2.5  dark:bg-gray-200 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
               value={fechaSeleccionada}
-              label="Date Time Picker"
+              label="Select Date and Hour"
               inputFormat="E MMM dd yyyy HH:MM:SS O"
               onChange={cambiarFechaSelecionada}
             />
@@ -59,8 +61,8 @@ export default function appointmentCreation({ pet }) {
                   name="symtoms"
                   rows={3}
                   className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 
-                                    mt-1 block w-full sm:text-sm text-black border border-gray-300 rounded-md"
-                  placeholder=" Ingrese los síntomas"
+                  dark:bg-gray-200 mt-1 block w-full sm:text-sm text-black border border-gray-300 rounded-md"
+                  placeholder="Let us know what's going on with your pet"
                   required
                 />
               </div>
@@ -77,22 +79,21 @@ export default function appointmentCreation({ pet }) {
                 name='IdPet'
                 required
                 className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white 
-                                rounded-md shadow-sm focus:outline-none text-black focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                dark:bg-gray-200 rounded-md shadow-sm focus:outline-none text-black focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               />
             </div>
           </div>
           <div className="p-4 flex justify-center">
           <button
                 type='submit'
-                className=' w-16 p-2 bg-green-300 rounded-3xl flex justify-items-end space-x-24'>
-                <div className='flex w-full justify-center items-center'>
-                  <img src={src2} alt='back' className='justify-items-end' />
-                </div>
+                className=' w-1/2 p-5 bg-green-300 rounded-3xl flex justify-center space-x-24 text-black font-bold text-lg'>
+                C R E A T E
               </button>
            
           </div>
         </form>
       </div>
     </div>
+    
   );
 }
