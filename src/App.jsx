@@ -1,34 +1,45 @@
 /* eslint-disable import/no-named-as-default */
 /* eslint-disable prettier/prettier */
+import { useEffect } from "react";
+import { gapi } from "gapi-script";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import RoutesContainer from "./common/utils/RoutesContainer/RoutesContainer";
-import UserPetRegisterView from "./userPetRegisterView/pages/UserPetRegisterView"
+import UserPetRegisterView from "./userPetRegisterView/pages/UserPetRegisterView";
 // eslint-disable-next-line import/no-named-as-default-member
 import Main from "./main/pages/main";
 import UserAppointmentCreation from "./UserAppointmentCreation/pages/UserAppointmentCreation";
 import Login from "./login/pages/Login";
 import MenuUser from "./menuUser/pages/menuUser";
-import Waves from "./common/assets/images/waves.png"
+import Waves from "./common/assets/images/waves.png";
 import AboutUs from "./aboutUs/pages/AboutUs";
 import VetView from "./vetView/pages/vetView";
 import VetPetRegisterView from "./vetPetRegisterView/pages/vetPetRegisterView";
 import Register from "./register/pages/Register";
 import UserPetView from "./userPetView/pages/UserPetView";
 import VetAppointment from "./vetAppointmentView/pages/VetAppointmentView";
-import VetAddVaccineView  from "./vetAddVaccineView/pages/vetAddVaccineView";
+import VetAddVaccineView from "./vetAddVaccineView/pages/vetAddVaccineView";
 import VaccineRegister from "./vaccineRegister/pages/VaccineRegister";
 
 import "./App.css";
 import "./index.css";
 
-
-
-
+const clientId =
+  "934779679694-g266vfjuv77f2a1n10j7rn9ft5kc4feu.apps.googleusercontent.com";
 function App() {
+  const accessToken = gapi.auth.getToken().access_token;
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId,
+        scope: ""
+      })
+    };
+    gapi.load("client:auth2", start);
+  });
+  
+
   return (
-    <div
-      className="bg-no-repeat bg-contain bg-fixed bg-bottom"
-    >
+    <div className="bg-no-repeat bg-contain bg-fixed bg-bottom">
       <BrowserRouter>
         <Routes>
           <Route
@@ -85,7 +96,12 @@ function App() {
           />
           <Route
             path="vaccineRegister"
-            element={<RoutesContainer title="vaccineRegister" element={<VaccineRegister />} />}
+            element={
+              <RoutesContainer
+                title="vaccineRegister"
+                element={<VaccineRegister />}
+              />
+            }
           />
           <Route
             path="vetPetRegisterView"
