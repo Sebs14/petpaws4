@@ -15,7 +15,7 @@ export default function Register() {
         navigation={[
           { name: "Home", href: "/", current: false },
           { name: "About Us", href: "/AboutUs", current: false },
-          { name: "Login", href: "/Login", current: false },
+          { name: "Log in", href: "/Login", current: false },
           { name: "Register", href: "/Register", current: true },
         ]}
         logged={{ function: false }}

@@ -10,7 +10,7 @@ export default function Login() {
         navigation={[
           { name: "Home", href: "/", current: false },
           { name: "About Us", href: "/AboutUs", current: false },
-          { name: "Login", href: "/Login", current: true },
+          { name: "Log in", href: "/Login", current: true },
           { name: "Register", href: "/Register", current: false },
         ]}
         logged={{ function: false }}

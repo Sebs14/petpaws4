@@ -25,15 +25,15 @@ export default function MenuUser() {
           url="/vetAppointments"
         />
         <MenuButton
-          title="Mascotas Registradas"
+          title="My Pets"
           src={Register}
-          buttonMenu="Mascotas Registradas"
+          buttonMenu="My Pets"
           url="/MyPet"
         />
         <MenuButton
-          title="Registro de Vacunas"
+          title="Vaccine Register"
           src={Vaccine}
-          buttonMenu="Registro de Vacunas"
+          buttonMenu="Vaccine Register"
           url="/vaccineRegister"
         />
       </CardContainer>
