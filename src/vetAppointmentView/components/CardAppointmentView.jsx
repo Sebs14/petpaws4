@@ -61,9 +61,19 @@ export default function Card({ title, color }) {
                 />
               ))}
             </table>
+            
           </article>
         </article>
       </article>
+      <div className="p-5 flex items-center justify-center text-black">
+            <div className="col-span-6 sm:col-span-3">
+            <a
+            href='https://meet.google.com/new'
+            className='w-full p-5 bg-emerald-500 rounded-3xl flex justify-center space-x-24 text-white font-bold text-lg hover:bg-emerald-800/80'>
+            New Meeting 
+          </a>
+            </div>
+          </div>
     </article>
   );
 }
