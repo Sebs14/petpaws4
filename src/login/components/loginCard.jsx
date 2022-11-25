@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { gapi } from "gapi-script";
 import LoginForm from "./LoginForm";
 import LoginGoogle from "./loginGoogle";
-import LogoutGoogle from "./LogoutGoogle";
+
 
 /* eslint-disable prettier/prettier */
 
@@ -16,7 +16,7 @@ export default function Card({ title}) {
       </h1>
       <a>
         <LoginGoogle/>
-        <LogoutGoogle/>
+        
       </a>
       <div>
         <h3 className="text-2xl align-center my-4 font-semibold text-center pr-20 pl-20 text-black dark:text-white">

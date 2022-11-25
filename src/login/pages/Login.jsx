@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-named-as-default
 import Navbar from "../../common/components/Navbar/Navbar";
 import LoginCard from "../components/loginCard";
-import Google from "../../common/assets/images/google.png";
+
 
 export default function Login() {
   return (

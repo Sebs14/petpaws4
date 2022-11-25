@@ -5,6 +5,7 @@ import Register from "../../common/assets/images/register.jpg";
 import CardContainer from "../../main/components/CardContainer/CardContainer";
 // eslint-disable-next-line import/no-named-as-default
 import Navbar from "../../common/components/Navbar/Navbar";
+import LogoutGoogle from "../components/LogoutGoogle";
 
 export default function MenuUser() {
   return (
@@ -16,6 +17,7 @@ export default function MenuUser() {
         ]}
         logged={{ function: true }}
       />
+      <LogoutGoogle/>
       <div className="h-full">
       <CardContainer>
         <MenuButton
