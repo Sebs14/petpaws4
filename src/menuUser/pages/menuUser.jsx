@@ -13,10 +13,11 @@ export default function MenuUser() {
       <Navbar
         navigation={[
           { name: "User", href: "/My", current: false },
-          { name: "Log Out", href: "/", current: false },
+          
         ]}
         logged={{ function: true }}
-      />
+      >
+      </Navbar>
       <LogoutGoogle/>
       <div className="h-full">
       <CardContainer>
